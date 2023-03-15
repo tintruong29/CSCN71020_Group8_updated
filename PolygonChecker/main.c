@@ -62,3 +62,23 @@ int* getTriangleSides(int* triangleSides) {
 	}
 	return triangleSides;
 }
+
+// Part 1. Add features
+
+// Modify this function to accept any input given by the user
+// Check is it a number? => Check if the numbers given can form a triangle
+// Output the three inside angles of the triangle
+
+// Write a function accept four points. Ask the user to enter the x and y one at a time
+// Validation input
+// Generate four lines and determine if those form a rectangle
+// Report the shape's perimeter, and if it is a rectangle also report is area.
+
+ // Part 2. Test
+
+// 1. Type of triangle functionality
+// 2. Triangle inside angle functionality
+// 3. 4 points functionality
+
+ // Part 3. Test Report
+
