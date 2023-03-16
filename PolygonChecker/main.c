@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include "triangleSolver.h"
-
+#include "TriangleAngles.h"
 int side = 0;
 
 int main() {
@@ -19,13 +19,16 @@ int main() {
 			printf_s("Triangle selected.\n");
 			int triangleSides[3] = { 0, 0, 0 };
 			int* triangleSidesPtr = getTriangleSides(triangleSides);
-			printf_s("! %d\n", triangleSidesPtr[0]);
+			// printf_s("! %d\n", triangleSidesPtr[0]);
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf_s("%s\n", result);
-
-			double triangleAngles[3] = { 0,0,0 };
-			getTriangleAngles(triangleSides, triangleAngles);
-
+			
+			if (result != "Not a triangle")
+			{
+				double triangleAngles[3] = { 0,0,0 };
+				getTriangleAngles(triangleSides, triangleAngles);
+				printf_s("Angle A is: %lf\nAngle B is: %lf\nAngle C is: %lf\n", triangleAngles[0], triangleAngles[1], triangleAngles[2]);
+			}
 			break;
 		case 0:
 			continueProgram = false;
