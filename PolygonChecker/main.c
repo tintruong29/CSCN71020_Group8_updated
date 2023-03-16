@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <stdlib.h>
 #include "main.h"
 #include "triangleSolver.h"
 
@@ -19,7 +19,7 @@ int main() {
 			printf_s("Triangle selected.\n");
 			int triangleSides[3] = { 0, 0, 0 };
 			int* triangleSidesPtr = getTriangleSides(triangleSides);
-			//printf_s("! %d\n", triangleSidesPtr[0]);
+			printf_s("! %d\n", triangleSidesPtr[0]);
 			char* result = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf_s("%s\n", result);
 			break;
@@ -54,18 +54,29 @@ int printShapeMenu() {
 	return shapeChoice;
 }
 
-int* getTriangleSides(int* triangleSides) {
-	printf_s("Enter the three sides of the triangle: ");
+int* getTriangleSides(int* triangleSides)
+{
+	int scannedValues;
+	
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
-	}
-	return triangleSides;
+		do
+		{
+			printf_s("Enter the three sides of the triangle: ");
+			scannedValues = scanf_s("%d", &triangleSides[i]);
+			int buf;
+			while ((buf = getchar()) != '\n' && buf != EOF);
+		} 
+		while (scannedValues != 1);
+			
+	} return triangleSides;
+	
+	
 }
 
 // Part 1. Add features
 
-// Modify this function to accept any input given by the user
+// Modify getTriangleSides function to accept any input given by the user
 // Check is it a number? => Check if the numbers given can form a triangle
 // Output the three inside angles of the triangle
 
