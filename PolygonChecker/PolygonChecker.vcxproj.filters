@@ -21,12 +21,42 @@
     <ClCompile Include="triangleSolver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="getTriangleAngles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetPoint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetLength.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleSolver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetAngle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="triangleSolver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="getTriangleAngles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetLength.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetAngle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
